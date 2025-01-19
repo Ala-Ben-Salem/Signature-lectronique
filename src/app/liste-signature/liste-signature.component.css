@@ -1,0 +1,108 @@
+body{
+  margin: 0px;
+  /* background-color: rgb(137, 134, 131);*/
+  width: 550px; 
+  padding: 5px;
+  background-color: rgb(181, 246, 225);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* Applique ce style à la liste parente */
+ul {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0; /* Supprime le retrait par défaut */
+  margin: 5px; /* Supprime les marges par défaut */
+}
+
+
+
+
+
+
+
+
+/* Style pour le conteneur des réseaux sociaux */
+.social-list-cont {
+  list-style-type: none; /* Supprime les puces */
+  padding: 20px 0; /* Supprime le retrait interne de la liste */
+  margin: 5px; /* Supprime les marges externes de la liste */
+  display: flex; /* Utilise un conteneur flexible */
+  flex-direction: column; /* Aligne les éléments verticalement */
+  gap: 10px; /* Ajoute un espacement vertical de 10px entre les icônes */
+  position: relative; /* Permet de positionner la ligne continue */
+}
+
+
+
+/* Style pour les éléments de la liste */
+.social-item {
+  display: flex; /* Assure un bon alignement des enfants */
+  align-items: center; /* Centre verticalement les icônes */
+  gap: 10px; /* Espacement entre la ligne et l'icône */
+  padding: 15px; /* Ajoute un espace entre la ligne et le contenu */
+}
+
+/* Style pour les liens */
+.s-item-a {
+  text-decoration: none; /* Supprime le soulignement du lien */
+  display: flex; /* Alignement flexible des éléments à l'intérieur */
+  align-items: center; /* Centre verticalement le contenu */
+  justify-content: center; /* Centre horizontalement le contenu */
+  border-radius: 50%; /* Rendre le lien circulaire */
+  width: 30px; /* Largeur du cercle */
+  height: 30px; /* Hauteur du cercle */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Animation douce */
+}
+
+/* Effet au survol */
+.s-item-a:hover {
+  transform: scale(1.1); /* Agrandit légèrement au survol */
+}
+
+
+
+
+
+
+
+.head-img {
+  border: 2px solid #ddd;
+  border-radius: 50%; /* Rendre l'image circulaire */
+  margin-right: 0px;
+} 
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1290px) {
+  body{
+      margin: 0px;
+      /* background-color: rgb(137, 134, 131); */
+      width: 550px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+
+
+
+
+/**************************************************/
+
+/* Centrer les éléments dans la div.row */
+.row.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}

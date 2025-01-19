@@ -1,0 +1,159 @@
+<body>
+<p>ajouter-signature works!</p>
+
+
+<div class="container">
+
+    <h1>Créer une signature électronique</h1>
+    <!-- Input for the image URL -->
+    <div class="mb-3">
+      <label for="imageUrl" class="form-label">URL de l'image de signature</label>
+      <input type="url" class="form-control" id="imageUrl" [(ngModel)]="imageUrl" (change)="updateImageUrl($event)" placeholder="https://votre-domaine.com/images/signature.png">
+      <div class="form-text">Veuillez entrer l'URL publique de votre image de signature.</div>
+    
+    </div>
+  
+    <!-- Aperçu de la signature électronique -->
+    <div *ngIf="imageUrl" class="signature-preview">
+       <!-- Aperçu de la signature électronique dans un tableau -->
+        <table  #signatureDiv class="sign-preview-wrap" style="border: 1px solid black; border-collapse: collapse;">
+          <tr>
+            <!-- Aperçu de l'image -->
+            <td class="signature-details" style="border: 1px solid black; border-collapse: collapse;">
+              <img [src]="imageUrl" alt="Votre signature" class="image-preview" style="height: 150px; width: 150px; object-fit: contain;">
+              <div>
+                <!-- Texte de la signature -->
+                <p style="color: brown; font-size: 16px;">Ceci est ma signature électronique</p>
+                <p style="color: gray; font-size: 14px;">Créé par ala ben salem</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <!-- Icônes associées -->
+            <td class="signature-icons" >
+              <i class="fas fa-envelope" title="E-mail"> 📧 ala&#64;esprit.tn</i>
+              <i class="fas fa-phone" title="Téléphone"> 📞 +(216) 28132996</i>
+              <i class="fas fa-map-marker-alt" title="Adresse"> 📍 Tunis, Nabeul</i>
+            </td>
+          </tr>
+        </table>
+
+      <!-- Boutons d'action -->
+      <!-- <button class="btn btn-primary m-2" (click)="copyHTMLSignature()">Copier HTML de signature</button> -->
+      <button class="btn btn-primary m-2" (click)="selectAndCopyDiv()">Sélectionner et Copier la Signature</button>
+
+    </div>
+
+
+
+    <!-- Notification de succès ✔️ -->
+  <div *ngIf="notificationVisible" class="notification success-notification">
+    ✅ Signature copié avec succès !
+  </div>
+  </div>
+
+
+<!-- 
+  <app-ajouter-signature-left-bar></app-ajouter-signature-left-bar>
+
+  <p>ajouter§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§</p>
+  <p>ajouter-signature works!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+  
+
+  <app-ajouter-signature-right-bar></app-ajouter-signature-right-bar>
+ -->
+
+
+
+  <!-- Disposition côte à côte -->
+  <div class="flex-container">
+    <app-ajouter-signature-left-bar></app-ajouter-signature-left-bar>
+    <app-ajouter-signature-right-bar></app-ajouter-signature-right-bar>
+  </div>
+
+<!-- 
+  <div class="grid-container">
+    <div class="header">Header</div>
+    <div class="sidebar">    <app-ajouter-signature-left-bar></app-ajouter-signature-left-bar>    </div>
+    <div class="main">    <app-ajouter-signature-right-bar></app-ajouter-signature-right-bar>    </div>
+    <div class="widget">Widget</div>
+    <div class="stats">Statistics</div>
+    <div class="footer">Footer</div>
+</div>
+<style>
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+
+  .grid-container {
+      display: grid;
+      grid-template-areas:
+          'header header header'
+          'sidebar main main'
+          'sidebar widget stats'
+          'footer footer footer';
+      grid-gap: 10px;
+      padding: 10px;
+      padding-top: 100px;
+  }
+
+
+  .header {
+      grid-area: header;
+      background-color: #4CAF50;
+      color: white;
+      padding: 50px;
+      text-align: center;
+  }
+
+  .sidebar {
+      grid-area: sidebar;
+      background-color: #2196F3;
+      color: white;
+      padding: 50px;
+  }
+
+  .main {
+      grid-area: main;
+      background-color: #f1f1f1;
+      padding: 50px;
+  }
+
+  .widget {
+      grid-area: widget;
+      background-color: #ff9800;
+      color: white;
+      padding: 50px;
+  }
+
+  .stats {
+      grid-area: stats;
+      background-color: #00bcd4;
+      color: white;
+      padding: 50px;
+  }
+
+  .footer {
+      grid-area: footer;
+      background-color: #555;
+      color: white;
+      text-align: center;
+      padding: 50px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .grid-container {
+          grid-template-areas:
+              'header'
+              'sidebar'
+              'main'
+              'widget'
+              'stats'
+              'footer';
+      }
+  }
+</style> -->
+
+</body>

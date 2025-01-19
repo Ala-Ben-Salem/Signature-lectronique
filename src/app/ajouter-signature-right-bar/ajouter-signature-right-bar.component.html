@@ -1,0 +1,186 @@
+<!-- <p>ajouter-signature-right-bar works!</p> -->
+
+
+    
+<body>
+
+  <section class="generator-right"   >
+    <div class="view-cont" style="width: 100%;" >
+      <header class="view-title flex-bt">
+        <span>Nouvel Signature Electronique Email</span>
+      </header>
+      <hr>
+      <section class="sign-preview-wrap flex-center"   >
+        <div style="opacity:0;font-size:0"></div>
+
+<table >  <!--style="border: 3px solid #0e2613; padding: 5px; margin: 10px;"-->
+
+        <table class="sign-preview layout1" style="background-color:#ffffff; width: 500px;" >
+          <tbody>
+            <tr class="tr1">
+                <td class="tr1-td1" >   <!--style="border: 1px solid ;" -->
+                <div class="head-img-cont"  >
+                  <!-- <img class="head-img" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/default-img.png?raw=true" alt="user img"   style="height: 130px; width: 130px; object-fit: contain;"> -->
+                  <img class="head-img" [src]="data?.photo" alt="user img"   style="height: 130px; width: 130px; object-fit: contain;"   [ngStyle]="{'font-family': data.police,'color':data.themecolortext, 'font-size': data.taillepolice+'%'}">
+
+                </div>
+              </td>
+              <td class="tr1-td2"   >   <!--style="border: 1px solid ;" -->
+                <div class="identity-info-cont"   >
+                  <h3 class="user-name Name-value" [ngStyle]="{'font-family': data.police,'color':data.themecolortext, 'font-size': data.taillepolice+50+'%'}">{{data.nom}}</h3>
+                  <div class="work-info">
+                    <span class="work-info-value jobTitle-value" [ngStyle]="{'font-family': data.police,'color':data.themecolortext, 'font-size': data.taillepolice+'%'}">{{data.fonction}} |</span>
+                    <span class="work-info-value Department-value" [ngStyle]="{'font-family': data.police,'color':data.themecolortext, 'font-size': data.taillepolice+'%'}"> {{data.department}} |</span>
+                    <span class="work-info-value Company-value" [ngStyle]="{'font-family': data.police,'color':data.themecolortext, 'font-size': data.taillepolice+'%'}"> {{data.entreprise}}</span>
+                  </div>
+                </div>
+                <ul class="other-info-cont" [ngStyle]="{'font-family': data.police,'color':data.themecolortext, 'font-size': data.taillepolice+'%'}">
+                  <li class="o-info-item" >
+                    <img class="o-info-svg" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/phone.png?raw=true" alt="Phone icon"  [ngStyle]="{'font-family': data.police,'background-color':data.themecolor, 'font-size': data.taillepolice+'%'}"   > 
+                    <span class="o-label"   [ngStyle]="{'font-family': data.police,'color':data.themecolor, 'font-size': data.taillepolice+'%'}">Téléphone:</span> 
+                    <span class="o-value Phone-value">{{data.telephone}}</span>
+                  </li>
+                  <li class="o-info-item">
+                    <img class="o-info-svg" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/mobile.png?raw=true" alt="Mobile icon"  [ngStyle]="{'font-family': data.police,'background-color':data.themecolor, 'font-size': data.taillepolice+'%'}"> 
+                    <span class="o-label" [ngStyle]="{'font-family': data.police,'color':data.themecolor, 'font-size': data.taillepolice+'%'}" >Mobile:</span> 
+                    <span class="o-value Mobile-value">{{data.mobile}}</span>
+                  </li>
+                  <li class="o-info-item">
+                    <img class="o-info-svg" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/email.png?raw=true" alt="Email icon"  [ngStyle]="{'font-family': data.police,'background-color':data.themecolor, 'font-size': data.taillepolice+'%'}"> 
+                    <span class="o-label"  [ngStyle]="{'font-family': data.police,'color':data.themecolor, 'font-size': data.taillepolice+'%'}">Email:</span> 
+                    <span class="o-value Email-value">{{data.email}}</span>
+                  </li>
+                  <li class="o-info-item">
+                    <img class="o-info-svg" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/website.png?raw=true" alt="Website icon"  [ngStyle]="{'font-family': data.police,'background-color':data.themecolor, 'font-size': data.taillepolice+'%'}"> 
+                    <span class="o-label"  [ngStyle]="{'font-family': data.police,'color':data.themecolor, 'font-size': data.taillepolice+'%'}">Site web:</span> 
+                    <span class="o-value WebsiteURL-value">{{data.siteweb}}</span>
+                  </li>
+                  <li class="o-info-item">
+                    <img class="o-info-svg" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/address.png?raw=true" alt="Address icon"  [ngStyle]="{'font-family': data.police,'background-color':data.themecolor, 'font-size': data.taillepolice+'%'}"> 
+                    <span class="o-label"  [ngStyle]="{'font-family': data.police,'color':data.themecolor, 'font-size': data.taillepolice+'%'}">Addresse:</span> 
+                    <span class="o-value Address-value">{{data.addresse}}</span>
+                  </li>
+                </ul>
+              </td>
+              <td class="tr1-td3"  >    <!--style="border: 1px solid ;" -->
+
+
+
+                <table   >
+                  <tbody  >
+                    <tr *ngIf="data.FacebookisChecked">
+                      <td style=" padding: 5px;"  [ngStyle]="{'font-family': data.police, 'border-left': '3px solid ' + data.themecolorlien, 'font-size': data.taillepolice + '%' }" >
+                        <a [href]="data.facebook" class="s-item-a Facebook-value" target="_blank" [ngStyle]="{'font-family': data.police,'background-color':data.themecolorlien, 'font-size': data.taillepolice+'%'}">
+                          <img class="social-svg s1" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/facebook.png?raw=true" alt="facebook icon"   width="9" height="15" style="margin: 8px;">
+                        </a>
+                      </td>
+                    </tr>
+                    <tr *ngIf="data.TwitterisChecked">
+                      <td style=" padding: 5px;"  [ngStyle]="{'font-family': data.police, 'border-left': '3px solid ' + data.themecolorlien, 'font-size': data.taillepolice + '%' }">
+                        <a [href]="data.twitter" class="s-item-a Twitter-value" target="_blank" [ngStyle]="{'font-family': data.police,'background-color':data.themecolorlien, 'font-size': data.taillepolice+'%'}">
+                          <img class="social-svg s2" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/twitter.png?raw=true" alt="twitter icon" width="15" height="15" style="margin: 8px;">
+                        </a>
+                      </td>
+                    </tr>
+                    <tr  *ngIf="data.YoutubeisChecked">
+                      <td style=" padding: 5px;"  [ngStyle]="{'font-family': data.police, 'border-left': '3px solid ' + data.themecolorlien, 'font-size': data.taillepolice + '%' }">
+                        <a [href]="data.youtube" class="s-item-a YouTube-value" target="_blank" [ngStyle]="{'font-family': data.police,'background-color':data.themecolorlien, 'font-size': data.taillepolice+'%'}">
+                          <img class="social-svg s3" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/youtube.png?raw=true" alt="youtube icon"   width="15" height="15"  style="margin: 8px;">
+                        </a>
+                      </td>
+                    </tr>
+                    <tr *ngIf="data.LinkedinisChecked">
+                      <td style=" padding: 5px;"  [ngStyle]="{'font-family': data.police, 'border-left': '3px solid ' + data.themecolorlien, 'font-size': data.taillepolice + '%' }">
+                        <a [href]="data.linkedin" class="s-item-a Linkedin-value" target="_blank" [ngStyle]="{'font-family': data.police,'background-color':data.themecolorlien, 'font-size': data.taillepolice+'%'}" >
+                          <img class="social-svg s4" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/linkedIn.png?raw=true" alt="linkedin icon"  width="15" height="15" style="margin: 8px;">
+                        </a>
+                      </td>
+                    </tr>
+                    <tr *ngIf="data.InstagramisChecked">
+                      <td style=" padding: 5px;"  [ngStyle]="{'font-family': data.police, 'border-left': '3px solid ' + data.themecolorlien, 'font-size': data.taillepolice + '%' }" >
+                        <a [href]="data.instagram" class="s-item-a Instagram-value" target="_blank" [ngStyle]="{'font-family': data.police,'background-color':data.themecolorlien, 'font-size': data.taillepolice+'%'}">
+                          <img class="social-svg s5" src="https://github.com/Ala-Ben-Salem/app_signature/blob/main/images/instagram.png?raw=true" alt="instagram icon"  width="15" height="15"  style="margin: 8px;">
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+</table>
+
+      </section>
+    </div>
+
+    <!--<div class="layout-cont">
+       <i class="btn-pre"></i>
+      <div class="layout-wrap">
+        <ul class="layout-select-cont">
+            <li class="layout-item flex-center active" data-id="1">
+            <img src="../../images/email/layout-item1.svg" alt="layout-item">
+            </li>
+            <li class="layout-item flex-center" data-id="2">
+              <img src="../../images/email/layout-item2.svg" alt="layout-item">
+            </li>
+            <li class="layout-item flex-center" data-id="3">
+              <img src="../../images/email/layout-item3.svg" alt="layout-item">
+            </li>
+            <li class="layout-item flex-center" data-id="4">
+              <img src="../../images/email/layout-item4.svg" alt="layout-item">
+            </li>
+            <li class="layout-item flex-center" data-id="5">
+              <img src="../../images/email/layout-item5.svg" alt="layout-item">
+            </li>
+            <li class="layout-item flex-center" data-id="6">
+              <img src="../../images/email/layout-item6.svg" alt="layout-item">
+            </li>
+        </ul>
+      </div>
+        <i class="btn-next"></i>
+      </div>
+      <div class="operation-cont flex-center">
+        <button class="copy-signature-btn" data-clipboard-target=".sign-preview-wrap">Copier la signature</button>
+      </div>
+      
+      <ul class="guide-cont flex-ard">
+        <li class="guide-item flex-center" data-id="Gmail">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="white"></circle>
+              <path d="M11.92 11.1702V13.1611H15.1667C15.0357 14.0154 14.1863 15.6651 11.92 15.6651C9.96647 15.6651 8.3707 14.0248 8.3707 11.9998C8.3707 9.97481 9.96647 8.33449 11.92 8.33449C13.0321 8.33449 13.7763 8.81352 14.2028 9.22941L15.7556 7.71102C14.7581 6.76675 13.4657 6.19336 11.92 6.19336C8.75498 6.19336 6.19531 8.78957 6.19531 11.9998C6.19531 15.2101 8.75498 17.8063 11.92 17.8063C15.2239 17.8063 17.4158 15.4503 17.4158 12.1326C17.4158 11.7509 17.375 11.4605 17.3256 11.1702H11.92Z" fill="#2361F9"></path>
+            </svg> 
+            <a href="#faq-gmail" class="g-a">Ajouter à Gmail</a>
+        </li>
+        <li class="guide-item flex-center" data-id="Outlook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="white"></circle>
+                <path d="M18.1291 9.64394V14.9937C18.1318 15.1045 18.0881 15.2111 18.0074 15.2877C17.9281 15.3656 17.8215 15.408 17.7107 15.4053H13.348V11.8533L14.1656 12.4809C14.2203 12.5246 14.2887 12.5479 14.3598 12.5451C14.4309 12.5465 14.502 12.5232 14.558 12.4809L18.1291 9.64394ZM13.348 8.61309H17.7121C17.8201 8.61309 17.9131 8.6459 17.9896 8.71152C18.0662 8.77715 18.1086 8.86465 18.1168 8.97129L14.3529 11.9709L13.348 11.1793V8.61309ZM12.7191 6.31348V17.6857L5.875 16.5031V7.52891L12.7191 6.31348ZM10.652 12.0229C10.6424 11.4445 10.492 10.9646 10.2035 10.5859C9.92051 10.2086 9.55273 10.009 9.11523 9.99121C8.69414 10.0076 8.33457 10.2072 8.04336 10.5859C7.75215 10.9646 7.60723 11.4445 7.59902 12.0229C7.60723 12.593 7.76035 13.0674 8.05156 13.4475C8.34277 13.8248 8.70234 14.0258 9.1248 14.0477C9.56094 14.0299 9.92871 13.8316 10.2199 13.4502C10.5111 13.0687 10.6643 12.593 10.6725 12.0215L10.652 12.0229ZM9.05918 10.7555C9.2793 10.765 9.46523 10.8867 9.61152 11.1219C9.75645 11.357 9.83301 11.6551 9.83301 12.016C9.83301 12.3838 9.75645 12.6832 9.61152 12.9197C9.4584 13.1562 9.2752 13.2793 9.05234 13.2793C8.82949 13.2793 8.64629 13.1645 8.49316 12.9266C8.34004 12.69 8.27168 12.3906 8.27168 12.0311C8.27168 11.6715 8.34004 11.3721 8.49316 11.1424C8.63809 10.9127 8.82266 10.7896 9.04551 10.7746L9.05918 10.7555Z" fill="#2361F9"></path>
+            </svg> 
+            <a href="#faq-outlook" class="g-a">Ajouter à Outlook</a>
+        </li>
+        <li class="guide-item flex-center" data-id="Yahoo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 24C18.6277 24 24 18.627 24 11.9997C24 5.37268 18.6277 0 12 0C5.37161 0 0 5.37268 0 11.9997C0 18.627 5.37161 24 12 24Z" fill="white"></path>
+                <path d="M15.662 10.1856C15.7289 10.1721 15.8274 10.1501 15.9394 10.126H16.8048L16.9399 9.92721C16.9422 9.92581 16.9474 9.9251 16.9505 9.9251L17.2854 9.44144C17.2806 9.44144 17.2727 9.44036 17.2689 9.44036L17.3037 9.38801H12.6134L12.794 10.126H14.0745L11.9203 12.0701C11.4804 11.463 10.4503 10.1983 9.73166 9.15137H11.3439V8.58983L11.3622 8.46615C11.3562 8.46478 11.3501 8.46395 11.3439 8.46368V8.41309H5.99609V9.15137H7.5819C8.19755 9.63264 10.5516 12.5723 10.6494 12.8655C10.6887 13.1401 10.7245 14.7606 10.6094 14.883C10.3779 15.1276 9.32234 15.0632 9.06744 15.081L8.9796 15.583C9.44462 15.5968 10.9581 15.5455 11.4286 15.5455C12.3558 15.5455 13.9798 15.541 14.2089 15.5585L14.2371 15.0318C14.0029 14.9922 12.7247 15.027 12.548 14.987C12.5087 14.7317 12.466 13.0257 12.5049 12.8496C12.6817 12.3398 15.3682 10.2649 15.662 10.1856Z" fill="#2361F9"></path>
+                <path d="M16.4447 14.2181L17.1633 14.2753L18.0002 11.0416C17.8606 11.0372 16.5901 10.917 16.4254 10.8849L16.4447 14.2181ZM16.3207 14.7362L16.3248 15.5255L16.6886 15.5572L17.0814 15.5865L17.1968 14.8137L16.7823 14.7934L16.3207 14.7362Z" fill="#2361F9"></path>
+            </svg> 
+            <a href="#faq-yahoo" class="g-a">Ajouter à Yahoo Mail</a>
+        </li>
+        <li class="guide-item flex-center" data-id="Apple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="white"></circle>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.64 6.22543C11.9064 7.03191 12.0151 8.00748 12.0151 8.00748C12.0151 8.00748 13.1697 8.00748 13.8761 7.175C14.5825 6.3425 14.3652 5.41895 14.3652 5.41895C14.3652 5.41895 13.3735 5.41895 12.64 6.22543ZM13.0757 8.61497C12.8195 8.74712 12.5805 8.8704 12.0755 8.8704C11.5456 8.8704 11.3464 8.75773 11.1264 8.63332C10.8595 8.48236 10.5621 8.31409 9.60588 8.30886C7.86168 8.29932 6.16378 10.0665 6.41075 12.878C6.65772 15.6895 8.98847 17.6907 9.9609 17.781C10.4313 17.8247 10.6666 17.7051 10.9276 17.5725C11.2061 17.4309 11.514 17.2744 12.1682 17.2856C12.7641 17.2958 13.0469 17.4132 13.331 17.5312C13.6312 17.6558 13.9329 17.781 14.607 17.781C15.919 17.781 17.6014 14.6009 17.6014 14.4716C17.6014 14.4435 17.524 14.4007 17.4016 14.3329C16.9612 14.0893 15.9384 13.5233 15.8418 12.1605C15.7183 10.4187 17.2618 9.50961 17.2618 9.50961C17.2618 9.50961 16.6907 8.4126 14.8385 8.30886C13.7836 8.24977 13.4146 8.44013 13.0757 8.61497Z" fill="#2361F9"></path>
+            </svg> 
+            <a href="#faq-apple" class="g-a">Ajouter à Apple Mail</a>
+        </li>
+      </ul>
+      -->
+</section>
+
+
+</body>

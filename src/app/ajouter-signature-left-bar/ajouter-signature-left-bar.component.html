@@ -1,0 +1,156 @@
+<!-- <p [style.color]="data.themecolortext"  [style.font-family]="data.police"  [style.font-size]= "data.taillepolice +'%'">ajouter-signature-left-bar works!</p>
+<p [ngStyle]="{'font-family': data.police,'color':data.themecolortext, 'font-size': data.taillepolice+'%'}">ajouter-signature-left-bar works!</p> -->
+<div class="bb">
+<section class="generator-left" >
+    <ul class="menu-cont flex-bt">
+      <li data-id="1" class="menu-item flex-center active"   [class.active]="activeSection === 'general'" (click)="setActiveSection('general')" style="color: yellow;">Général</li>
+      <li data-id="2" class="menu-item flex-center"  [class.active]="activeSection === 'social'" (click)="setActiveSection('social')" style="color: rgb(253, 179, 6);">Social</li>
+      <li data-id="3" class="menu-item flex-center" [class.active]="activeSection === 'images'"  (click)="setActiveSection('images')" style="color: rgb(103, 246, 8);">Image</li>
+      <li data-id="4" class="menu-item flex-center"  [class.active]="activeSection === 'design'" (click)="setActiveSection('design')" style="color: rgb(230, 65, 15);">Colors</li>
+    </ul>
+    <div class="info-input-cont">
+      <div class="info-item cont-1 active" *ngIf="activeSection === 'general'">
+        <div class="input-cont flex-bt">
+          <label for="Name" class="info-label">Nom</label> 
+          <input type="text" name="Name" class="info-input" placeholder="Foulen Ben Foulen" [(ngModel)]="data.nom">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="jobTitle" class="info-label">Fonction</label> 
+          <input type="text" name="jobTitle" class="info-input" placeholder="Directeur" [(ngModel)]="data.fonction">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Department" class="info-label">Départment</label> 
+          <input type="text" name="Department" class="info-input" placeholder="Informatique"  [(ngModel)]="data.department">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Company" class="info-label">Entreprise</label> 
+          <input type="text" name="Company" class="info-input" placeholder="Signature"  [(ngModel)]="data.entreprise">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Phone" class="info-label">Téléphone</label> 
+          <input type="text" name="Phone" class="info-input" placeholder="28123456"  [(ngModel)]="data.telephone">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Mobile" class="info-label">Mobile</label> 
+          <input type="text" name="Mobile" class="info-input" placeholder="727777777" [(ngModel)]="data.mobile">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Website" class="info-label">URL du site web</label> 
+          <input type="text" name="WebsiteURL" class="info-input" placeholder="www.foulen.com"  [(ngModel)]="data.siteweb">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Email" class="info-label">Email</label> 
+          <input type="text" name="Email" class="info-input" placeholder="Foulen@nomDomain.com"   [(ngModel)]="data.email">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Address" class="info-label">Addresse</label> 
+          <input type="text" name="Address" class="info-input" placeholder="Tunis, Nabeul, 8060" [(ngModel)]="data.addresse">
+        </div>
+      </div>
+
+      <div class="info-item cont-2 active"  *ngIf="activeSection === 'social'">
+        <div class="input-cont flex-bt">
+          <label for="Facebook" class="info-label flex">
+            <input type="checkbox" name="Facebook" class="info-checkbox"  [(ngModel)]="data.FacebookisChecked"> 
+            <span>Facebook</span>
+          </label> 
+          <input type="text" name="Facebook" class="social-input" placeholder="https://www.facebook.com"  [(ngModel)]="data.facebook"   [readonly]="!data.FacebookisChecked">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Twitter" class="info-label flex">
+            <input type="checkbox" name="Twitter" class="info-checkbox" [(ngModel)]="data.TwitterisChecked"> 
+            <span>Twitter</span>
+          </label> 
+          <input type="text" name="Twitter" class="social-input" placeholder="https://www.twitter.com"  [(ngModel)]="data.twitter"  [readonly]="!data.TwitterisChecked">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="YouTube" class="info-label flex">
+            <input type="checkbox" name="YouTube" class="info-checkbox" [(ngModel)]="data.YoutubeisChecked"> 
+            <span>YouTube</span>
+          </label> 
+          <input type="text" name="YouTube" class="social-input" placeholder="https://www.youtube.com"  [(ngModel)]="data.youtube"  [readonly]="!data.YoutubeisChecked">
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Linkedin" class="info-label flex">
+            <input type="checkbox" name="Linkedin" class="info-checkbox" [(ngModel)]="data.LinkedinisChecked"> 
+            <span>Linkedin</span>
+          </label> 
+          <input type="text" name="Linkedin" class="social-input" placeholder="https://www.linkedin.com"   [(ngModel)]="data.linkedin"   [readonly]="!data.LinkedinisChecked"  >
+        </div>
+        <div class="input-cont flex-bt">
+          <label for="Instagram" class="info-label flex">
+            <input type="checkbox" name="Instagram" class="info-checkbox" [(ngModel)]="data.InstagramisChecked"> 
+            <span>Instagram</span>
+          </label> 
+          <input type="text" name="Instagram" class="social-input" placeholder="https://www.instagram.com"   [(ngModel)]="data.instagram"  [readonly]="!data.InstagramisChecked">
+        </div>
+      </div>
+
+      <div class="info-item cont-3 active" *ngIf="activeSection === 'images'">
+        <label for="headder-img" class="header-img-label">Logo / Photo</label> 
+        <input type="text" name="header-img" class="header-img-input" placeholder="https://edusign.com/fr/wp-content/uploads/sites/2/2022/05/image-signature-electronique.jpg.webp"  [(ngModel)]="data.photo">
+        <p class="img-tip">Déposez une image dans votre Dropbox, Google Drive ou un site similaire et collez l'URL ici.</p>
+      </div>
+
+      <div class="info-item cont-4 active" *ngIf="activeSection === 'design'">
+        <span class="label-title">Sélectionnez la couleur du thème</span>
+        <div class="design-value-cont flex">
+          <span>Code</span> 
+          <input type="text" maxlength="6" class="color-input theme-color-input" placeholder="#03af3c" [(ngModel)]="data.themecolor" readonly>
+          <div class="color-view" >
+            <input type="color" class="color-select theme-color-select"  [(ngModel)]="data.themecolor">
+          </div>
+        </div>
+        <span class="label-title">Sélectionnez la couleur du texte</span>
+        <div class="design-value-cont flex">
+          <span>Code</span> 
+          <input type="text" maxlength="6" class="color-input text-input" placeholder="#1c1c1c" [(ngModel)]="data.themecolortext" readonly>
+          <div class="color-view text">
+            <input type="color" class="color-select text-select"   [(ngModel)]="data.themecolortext">
+          </div>
+        </div>
+        <span class="label-title">Sélectionnez la couleur du lien</span>
+        <div class="design-value-cont flex">
+          <span>Code</span> 
+          <input type="text" maxlength="6" class="color-input link-input" placeholder="#03af3c" [(ngModel)]="data.themecolorlien" readonly>
+          <div class="color-view link">
+            <input type="color" class="color-select link-select"  [(ngModel)]="data.themecolorlien">
+          </div>
+        </div>
+        <span class="label-title">Police</span>
+        <div class="design-value-cont">
+          <select [(ngModel)]="data.police" name="font" class="font-select">
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Trebuchet Ms">Trebuchet Ms</option>
+            <option value="VerDana">VerDana</option>
+          </select>
+        </div>
+        <span class="label-title">Taille de la police</span>
+        <div class="design-value-cont">
+            <div class="gg">
+          <div class="font-size-view">{{data.taillepolice}} %</div>
+          <input type="range" min="70" max="140" value="100" step="10" class="font-range" [(ngModel)]="data.taillepolice">
+            </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+
+</section>
+</div>
+
+<div class="btnajou">
+  <button class="btn btn-outline btn-success" type="submit"  (click)="add()" style="width: 200px; background-color:#36d84c;">Ajouter</button>
+</div>
+
+
+
+
+

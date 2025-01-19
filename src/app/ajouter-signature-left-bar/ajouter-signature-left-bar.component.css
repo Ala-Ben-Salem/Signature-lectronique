@@ -1,0 +1,341 @@
+/* General Styles */
+.bb {
+    font-family: Arial, sans-serif;
+    margin-left: 150px;
+    /* margin-right: 0;*/
+    padding: 10px; 
+    background-color: #36d84c;
+    width: 400px;
+
+
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .flex-bt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Generator Layout */
+  .generator-content {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  
+  
+  .generator-left {
+    border-radius: 20px 20px 0 0;
+    background-color: #3c3a5f;
+    height: 15.4cm;
+    width: 10cm;
+    padding: 20px;
+    /* border: 1px solid #c13131; */
+    box-sizing: border-box; /* Ensures padding is included in the height and width */
+  }
+  
+  
+  
+  
+  /* Menu */
+  .menu-cont {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #9d2a2a;
+    transition: color 0.3s, background-color 0.5s ease; /* Transition lente */;
+  }
+
+  
+  
+  .menu-item:hover,
+  .menu-item.active {
+    color: #fff;
+    background-color: #2361F9;
+    border-radius: 5px;
+  }
+  
+  /* Input Containers */
+  .info-input-cont {
+    margin-top: 10px;
+    margin-left: -5.9%;
+    margin-right: -5.8%;
+    height: 13.4cm;
+
+    padding: 10px 10px 0 10px;
+    border-radius: 20px 20px 0 0;
+    /* border: 1px solid #c13131; */
+    background-color: #494860;
+  }
+  
+  .input-cont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .info-label {
+    width: 30%;
+    font-weight: bold;
+    color: #ebf4ee;
+  }
+  
+  .info-input,
+  .social-input {
+    width: 65%;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 1px;
+    font-size: 14px;
+    background-color:#3c3a5f;
+  }
+  
+  .info-input:focus,
+  .social-input:focus {
+    border-color: #2361F9;
+    outline: none;
+  }
+  
+  .info-checkbox {
+    margin-right: 8px;
+  }
+  
+  /* Design Section */
+  .header-img-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .header-img-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .img-tip {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  .design-value-cont {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; Permet d'afficher les éléments sur des lignes séparées */
+
+  }
+
+  .gg{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .color-input {
+    width: 80px;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .color-select {
+    margin-left: 10px;
+  }
+  
+  .font-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .font-range {
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  /* Email Preview */
+  .view-cont {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .view-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .email-title-info {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .sign-preview {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .head-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .identity-info-cont h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .work-info {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .other-info-cont {
+    list-style: none;
+    margin: 15px 0 0;
+    padding: 0;
+  }
+  
+  .o-info-item {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .o-info-svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 968px) {
+    .generator-content {
+      flex-direction: column;
+
+    }
+  
+    .generator-left,
+    .generator-right {
+      border: 1px solid #c13131;
+      height: 15cm;
+      width: 10cm;
+      overflow-y: auto
+    }
+  
+    .menu-item {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .input-cont {
+      flex-direction: column;
+    }
+  
+    .info-label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .info-input,
+    .social-input {
+      width: 100%;
+    }
+
+
+    .info-input-cont {
+        margin-bottom: -6%;
+        height: 20cm;
+    }
+
+
+
+  }
+  
+
+  
+
+
+
+
+  /*************************    cercle de colors   ***********************************************/
+
+  .color-select {
+    appearance: none; /* Supprime l'apparence par défaut du sélecteur */
+    width: 40px; /* Largeur du cercle */
+    height: 40px; /* Hauteur du cercle */
+    border: none;
+    border-radius: 50%; /* Rend l'élément circulaire */
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .color-select::-webkit-color-swatch {
+    border: none; /* Supprime la bordure du swatch */
+    border-radius: 50%; /* Rend l'intérieur circulaire */
+  }
+  
+  .color-select::-webkit-color-swatch-wrapper {
+    padding: 0; /* Supprime les marges internes */
+  }
+  
+  .color-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  
+
+
+
+  
+  .btnajou {
+    margin-top: 10px; /* Espacement entre la section et le bouton */
+    margin-left: 240px;  
+}
+  
+ 
