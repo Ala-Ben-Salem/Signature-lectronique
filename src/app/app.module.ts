@@ -11,6 +11,7 @@ import { ListeSignatureComponent } from './liste-signature/liste-signature.compo
 import { AjouterSignatureComponent } from './ajouter-signature/ajouter-signature.component';
 import { AjouterSignatureLeftBarComponent } from './ajouter-signature-left-bar/ajouter-signature-left-bar.component';
 import { AjouterSignatureRightBarComponent } from './ajouter-signature-right-bar/ajouter-signature-right-bar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AjouterSignatureRightBarComponent } from './ajouter-signature-right-bar
     ListeSignatureComponent,
     AjouterSignatureComponent,
     AjouterSignatureLeftBarComponent,
-    AjouterSignatureRightBarComponent
+    AjouterSignatureRightBarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
