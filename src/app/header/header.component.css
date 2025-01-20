@@ -1,0 +1,10 @@
+.navbar-nav .nav-link {
+    text-decoration: none; /* Remove underline for all links */
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: underline;
+    text-decoration-color: #f69105; /* Change to your preferred color */
+    padding-top: 7px;
+    text-underline-offset: 5px; /* Adjust the distance between text and underline */
+}
