@@ -3,7 +3,7 @@
 <!-- <div class="row d-flex justify-content-center align-items-center"> -->
   <div class="row centered-content">
 
-<body   *ngFor="let data of listservicesignature"   class="card m-3" >
+<body   *ngFor="let data of listservicesignature; let i = index"   class="card m-3" >
 
   <section class="generator-right"    >
     <div class="view-cont" style="width: 100%;" >
@@ -11,7 +11,7 @@
         <span>Nouvel Signature Electronique Email sous l'ID: {{data.id}}</span>
       </header>
       <hr>
-      <section class="sign-preview-wrap flex-center"   >
+      <section class="sign-preview-wrap flex-center"    [attr.data-index]="i"  >
         <div style="opacity:0;font-size:0"></div>
 
 <table >
@@ -116,14 +116,24 @@
 </table>
 
       </section>
+      <button class="btn btn-primary m-2" (click)="selectAndCopyDiv(i)">Copier la Signature</button>
+
     </div>
 
 </section>
 
 
 </body>
+
 </div>
 
+
+
+
+  <!-- Notification de succès ✔️ -->
+  <div *ngIf="notificationVisible" class="notification success-notification">
+    ✅ Signature {{storedIndex+1}} copié avec succès !
+  </div>
 
 
 

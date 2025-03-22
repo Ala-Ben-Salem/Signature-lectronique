@@ -9,18 +9,11 @@ export class AjouterSignatureComponent {
 
 
     @ViewChild('signatureDiv') signatureDiv: ElementRef<HTMLDivElement> | undefined;
-    imageUrl: string | null = null;
     notificationVisible: boolean = false;  // Pour contrôler la visibilité de la notification
   
+
   
-    constructor() {
-      this.imageUrl = 'https://signature-generator.com/images/email/default-img.png';
-    }
-  
-    // Method to update the image URL (e.g., from an input field)
-    updateImageUrl(event: any): void {
-      this.imageUrl = event.target.value;
-    }
+    
   
     copyHTMLSignature(): void {
       if (this.signatureDiv && this.signatureDiv.nativeElement) {
@@ -33,23 +26,7 @@ export class AjouterSignatureComponent {
       }
     }
   
-    selectAndCopyDiv() {
-      const divElement = this.signatureDiv?.nativeElement;
-      if (divElement && document.body.contains(divElement)) {
-        const range = document.createRange();
-        range.selectNodeContents(divElement);
-  
-        const selection = window.getSelection();
-        selection?.removeAllRanges();
-        selection?.addRange(range);
-  
-        document.execCommand('copy');
-        //alert('Le contenu de la signature a été sélectionné et copié !');
-        this.showSuccessNotification();
-      } else {
-        console.error('L\'élément de signature n\'est plus dans le document.');
-      }
-    }
+   
   
   
   
