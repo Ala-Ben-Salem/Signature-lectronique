@@ -4,11 +4,11 @@
     margin-left: 150px;
     /* margin-right: 0;*/
     padding: 10px; 
-    background-color: #36d84c;
+    background-color: #a2ba00;
     width: 400px;
+    border-radius: 30px 30px 0 0;
 
-
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center; 
   }
@@ -57,6 +57,8 @@
     margin: 0;
     padding: 0;
     border-bottom: 1px solid #ddd;
+    background-color: #333;
+    border-radius: 7px 7px 0px 0px;
   }
   
   .menu-item {
@@ -107,7 +109,7 @@
     border-bottom: 1px solid #ddd;
     border-radius: 1px;
     font-size: 14px;
-    background-color:#3c3a5f;
+    background-color:#ededf1;
   }
   
   .info-input:focus,

@@ -106,3 +106,37 @@ ul {
   flex-wrap: wrap;
   margin: 20px;
 }
+
+
+
+
+
+
+
+
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50; /* Vert */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.success-notification {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.highlight-selection {
+  background-color: rgba(17, 0, 255, 0.5); /* Jaune clair pour indiquer la sélection */
+  transition: background-color 0.5s ease;    /* Animation pour un effet visuel plus doux */
+}

@@ -1,19 +1,35 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <a class="navbar-brand" routerLink="/home">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/ajouterSignature" routerLinkActive="active">Ajouter Signature</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/listeSignature" routerLinkActive="active">Liste Signature</a>
-            </li>
-        </ul>
+
+<nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="#">Logo</a>
+      </div>
+      
+      <div class="navbar-toggle"  [ngClass]="{'active': isMenuOpen}" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      
+      <ul class="navbar-menu" [ngClass]="{'active': isMenuOpen}">
+        <li class="navbar-item">
+          <a routerLink="/home" class="navbar-link" routerLinkActive="active" (click)="reloadPage($event)">Accueil</a>
+        </li>
+        <li class="navbar-item">
+          <a  class="navbar-link" routerLink="/ajouterSignature" routerLinkActive="active" (click)="reloadPage($event)">Ajouter Signature</a>
+        </li>
+        <li class="navbar-item">
+          <a  class="navbar-link" routerLink="/listeSignature" routerLinkActive="active" (click)="reloadPage($event)">Liste Signature</a>
+        </li>
+        <li class="navbar-item">
+          <a  class="navbar-link">Contact</a>
+        </li>
+        <li class="navbar-item navbar-btn">
+          <a  class="button">S'inscrire</a>
+        </li>
+      </ul>
     </div>
-</nav>
+  </nav>
+
+
+ 

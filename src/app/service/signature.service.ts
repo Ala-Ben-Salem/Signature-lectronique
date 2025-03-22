@@ -37,7 +37,7 @@ export class SignatureService {
     taillepolice: 100,
 
     FacebookisChecked:  true,
-    TwitterisChecked:   false,
+    TwitterisChecked:   true,
     YoutubeisChecked:   true,
     LinkedinisChecked:  true,
     InstagramisChecked: true,
